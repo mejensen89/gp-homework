@@ -1,6 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-/utils/config.js
+src/utils/config.js
+
 # dependencies
 /node_modules
 /.pnp
