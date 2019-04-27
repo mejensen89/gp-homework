@@ -2,6 +2,9 @@
 
 This is a toDo list built to match the specs given at: https://github.com/david-gp/test-react-todomvc
 
+heroku deployment: https://lit-thicket-19310.herokuapp.com/
+github repo: https://github.com/mejensen89/gp-homework
+
 ##Roadblocks I Encountered: 
 
  I actually had never used the component/container model. So I had to read up on it and do my best to build things with that pattern. It trial and error, and I realize saying that will probably cost me a job offer, but I'm proud that I was able to take a unfamiliar concept and implement it relatively quickly. I learned how to better structure projects and become a better developer over the course of this. Thank you all for that. It was challenging and on the list item I ended up going for getting it functional over keeping exactly to a pattern as I was having trouble writing the methods in the container. After having used the pattern, I think it is a great way to structure apps and to build re-usable chunks of code. I'm definitely going to keep using it on projects I'm working on now like a basic blogging platform built in React and a 'make-smart-workout-programs' app that lets coaches create training programs that automatically update based on athlete feedback. 
