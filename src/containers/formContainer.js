@@ -7,7 +7,8 @@ class FormContainer extends Component{
 	constructor(props){
 		super(props);
 		this.state={
-			title: ''
+			title: '',
+			isValid: false
 		}
 		this.createItem = this.createItem.bind(this);
 		this.handleInput = this.handleInput.bind(this);
@@ -16,13 +17,17 @@ class FormContainer extends Component{
 	}
 	
 	createItem(e){
-		e.preventDefault()
-	    this.ListRef.push({
-	        title: this.state.title.trim(),
-	        finished: false,         
-	      }).catch(err=>{
-	        console.log(err)
-	      });
+
+		if(this.state.title){
+			this.ListRef.push({
+		        title: this.state.title.trim(),
+		        finished: false,         
+		      }).catch(err=>{
+		        console.log(err)
+		    })
+		} else (
+			alert("Please enter a To Do before submitting")
+		)	    
 	  }
 
 	handleInput(e){

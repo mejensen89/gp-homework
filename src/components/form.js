@@ -17,7 +17,8 @@ class Form extends Component{
 				onSubmit={(e)=>{this.props.createItem(e)} }
 			>
 				<div className="form-group"> 
-					<input  
+					<input 
+						ref="title" 
 						type="text"
 						name="title"	
 						placeholder="Enter a To Do"									
