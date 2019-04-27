@@ -6,7 +6,6 @@
   import Counter from './components/counter';
   import List from './components/list';
   import fire from './utils/config';
-  import './App.css';
 
 /**************Constructor**************/
   class App extends Component{
@@ -60,30 +59,36 @@
 
   render(){
     return(
-        <div className="Col-sm-12">
-          <h1> Genius Plaza To Do List </h1>
-          <div className="row"> 
+        <div className="container-fluid text-center">
+          <h2> Genius Plaza To Do List </h2>
+          <div className="flex-sm-column d-flex"> 
             <FormContainer
             />
-            <Counter 
-              count = {this.state.newList.length}
-              formatCount = {this.formatCount}
-              newList = {this.state.newList}
-            />    
-          </div>         
-          <div>
-            <h2>Your Current To Do List</h2>
-            {this.state.newList.map((item, index)=>
-              <List 
-                indexKey={index}
-                itemKey={item.key}
-                finished={item.finished}
-                title ={item.title}
-                removeItem ={this.removeItem}
-                firebase = {firebase}
-                ListRef = {this.ListRef}
-              />
-            )}
+               
+          </div>
+          <h2>Your Current To Do List</h2>
+          <Counter 
+            count = {this.state.newList.length}
+            formatCount = {this.formatCount}
+            newList = {this.state.newList}
+          /> 
+          <div className="row">
+            <div className="col-sm-4">
+            </div>         
+            <div className="col-sm-4 justify-content-center">
+              
+              {this.state.newList.map((item, index)=>
+                <List 
+                  indexKey={index}
+                  itemKey={item.key}
+                  finished={item.finished}
+                  title ={item.title}
+                  removeItem ={this.removeItem}
+                  firebase = {firebase}
+                  ListRef = {this.ListRef}
+                />
+              )}
+            </div>
           </div>
         </div>
       )

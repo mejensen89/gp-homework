@@ -13,16 +13,22 @@ class Form extends Component{
 	render(){
 		
 		return(
-			<form onSubmit={(e)=>{this.props.createItem(e)} }>
-				<label> Enter your todo </label>
-				<input  
-					type="text"
-					name="title"										
-					onChange={this.props.handleInput}
-				/>
+			<form
+				onSubmit={(e)=>{this.props.createItem(e)} }
+			>
+				<div className="form-group"> 
+					<input  
+						type="text"
+						name="title"	
+						placeholder="Enter a To Do"									
+						onChange={this.props.handleInput}
+					/>
 				<input
+					className="btn btn-light btn-outline-primary"
 					type="submit"
+					value="+"
 				/>
+				</div>
 			</form>
 		)
 	}

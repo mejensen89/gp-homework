@@ -16,12 +16,7 @@ class List extends Component{
 		this.setState({finished: this.props.finished })
 	}
 
-	componentDidUpdate(prevState, prevProps){
-		if(prevState !== this.state){
-			console.log('List item updated - state')
-		} else if (prevProps !== this.props){
-			console.log('List item updated - props')
-		}
+	componentDidUpdate(){
 	}
 
 
@@ -30,45 +25,50 @@ class List extends Component{
 	    this.setState({finished: change}); 
 	    let updateThis = this.props.firebase.database().ref('List/'+this.props.itemKey);
 	    updateThis.ref.update({ finished: change});
-	    console.log("Finished set to "+ change);
-	      
+	    console.log("Finished set to "+ change);	      
 	  }
 
 	removeItem(item){
 		let itemKey = this.props.itemKey;
 		console.log(itemKey +" removed");
       this.props.ListRef.child(itemKey).remove()
-  }
+  	}
 
 	render(){
 		return(
 			<div 
 				key={this.props.itemKey} 
 				className={this.state.finished?(
-					"finishedStyle"
+					"finishedStyle border border-danger bg-dark rounded serif"
 					):(
-					"notFinishedStyle"
+					"notFinishedStyle border border-primary bg-light rounded serif"
 				)}
 			>
-				<p> Title: {this.props.title} </p>
+				<p>{this.props.title} </p>
 				<button
+					className={this.state.finished?(
+							"btn btn-dark btn-outline-danger serif"
+						):(
+							"btn btn-light btn-outline-primary serif"
+					)}
+					
 					onClick={(e)=>this.toggleFinished()}
 				>{this.state.finished?
-					("Mark as Incomplete")
-					:("Mark as Complete")
+					("Uncross it ")
+					:("Cross it off")
 				}</button>
 				<button
+					className={this.state.finished?(
+							"btn btn-dark btn-outline-danger serif"
+						):(
+							"btn btn-light btn-outline-primary serif"
+					)}
 					onClick={(e)=>this.removeItem(e)}
 				> Delete </button>
 			</div>
 		)
 	}
 }
-
-List.protoTypes={
-	removeItem: PropTypes.func
-}
-
 
 
 export default List;

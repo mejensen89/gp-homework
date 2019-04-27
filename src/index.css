@@ -6,7 +6,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  margin: 5px;
+  padding: 5px;
+  background-color: Gainsboro;
 }
 
 code {
@@ -14,21 +16,33 @@ code {
     monospace;
 }
 
+.newFont{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
+}
+
+.serif{
+  font-family: serif;
+}
+
+.sansSerif{
+  font-family: sans-serif;
+}
+
 .finishedStyle {
-	background-color: Black;
 	text-decoration: line-through;
 	color: red;
+  align-items: center;
 	text-align: center;
-	border: 5px solid red;
+  max-width: 100%;
   margin: 5px;
   padding: 5px;
 }
 
 .notFinishedStyle {
-  background-color: gainsboro;
   color: black;
   text-align: center;
-  border: 5px solid green;
+  max-width: 100%;
   margin: 5px;
   padding: 5px;
 }

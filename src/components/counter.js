@@ -8,7 +8,9 @@ class Counter extends Component{
 	render(){
 		let count = this.props.count;
 		return(
-			<p>{this.props.formatCount(count)}</p>
+			<div className="text-align-center">
+				<p>{this.props.formatCount(count)}</p>
+			</div>
 		)
 	}
 }

@@ -1,68 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Overview: 
 
-## Available Scripts
+This is a toDo list built to match the specs given at: https://github.com/david-gp/test-react-todomvc
 
-In the project directory, you can run:
+##Roadblocks I Encountered: 
 
-### `npm start`
+ I actually had never used the component/container model. So I had to read up on it and do my best to build things with that pattern. It trial and error, and I realize saying that will probably cost me a job offer, but I'm proud that I was able to take a unfamiliar concept and implement it relatively quickly. I learned how to better structure projects and become a better developer over the course of this. Thank you all for that. It was challenging and on the list item I ended up going for getting it functional over keeping exactly to a pattern as I was having trouble writing the methods in the container. After having used the pattern, I think it is a great way to structure apps and to build re-usable chunks of code. I'm definitely going to keep using it on projects I'm working on now like a basic blogging platform built in React and a 'make-smart-workout-programs' app that lets coaches create training programs that automatically update based on athlete feedback. 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ The way I understood the Component/Container model was that it was like putting an MVC architecture on a react project, so to keep my brain working I ended up using a firebase backend for the M part of that.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+ Styling, I was running short on time so I used bootstrap. It's not the most visually stunning app but it works and dynamically changes style based on user actions, which is my fancy way of saying I built logical operators into the render function that check state. 
 
-### `npm test`
+ ##Deploying app on any server: 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ Since this is an SPA we don't really need to worry about routing or anything, so setting up your server so that a visitor is served `index.html` from the public folder would accomplish the task after the app is uploaded to the server. 
 
-### `npm run build`
+ ##Final Thoughts
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+ This is also the first ever README I've written. This whole experience has been great so thank you all so much for giving me the opportunity to build this!!! It makes me feel that regardless of if I get a job offer, I am learning and improving and the time I've put in to learn how to code is going to lead somewhere. 
