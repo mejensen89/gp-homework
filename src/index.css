@@ -16,6 +16,10 @@ code {
     monospace;
 }
 
+.listCheckbox{
+  padding: 5px;
+}
+
 .newFont{
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";

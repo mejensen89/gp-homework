@@ -16,8 +16,9 @@ class FormContainer extends Component{
 	}
 	
 	createItem(e){
+		e.preventDefault()
 	    this.ListRef.push({
-	        title: this.state.title,
+	        title: this.state.title.trim(),
 	        finished: false,         
 	      }).catch(err=>{
 	        console.log(err)

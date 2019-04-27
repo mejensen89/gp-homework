@@ -66,12 +66,19 @@
             />
                
           </div>
-          <h2>Your Current To Do List</h2>
-          <Counter 
-            count = {this.state.newList.length}
-            formatCount = {this.formatCount}
-            newList = {this.state.newList}
-          /> 
+          {this.state.newList.length === 0?(
+            <span></span>
+            ):(
+            <div>
+              <h2>Your Current To Do List</h2>
+              <Counter 
+                count = {this.state.newList.length}
+                formatCount = {this.formatCount}
+                newList = {this.state.newList}
+              />
+            </div> 
+          )}
+          
           <div className="row">
             <div className="col-sm-4">
             </div>         
